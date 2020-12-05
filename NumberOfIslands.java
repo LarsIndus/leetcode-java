@@ -8,7 +8,7 @@ by connecting adjacent lands horizontally or vertically.
 You may assume all four edges of the grid are all surrounded by water.
 
 Complexity for this solution:
-O(nm) time (linear in size of the matrix) and O(1) space
+O(nm) time (linear in size of the matrix)
 
 */
 

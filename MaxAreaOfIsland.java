@@ -10,7 +10,7 @@ Find the maximum area of an island in the given 2D array.
 (If there is no island, the maximum area is 0.)
 
 Complexity for this solution:
-O(nm) time (linear in size of the matrix) and O(1) space
+O(nm) time (linear in size of the matrix)
 
 */
 
@@ -44,8 +44,6 @@ public class MaxAreaOfIsland {
 
         return area;
     }
-
-    
 
     public static void main(String[] args) {
         int[][] grid = {
