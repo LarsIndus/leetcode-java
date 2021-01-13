@@ -12,8 +12,8 @@ Initially, the frog is on the first stone
 and assume the first jump must be 1 unit.
 
 If the frog's last jump was k units,
-then its next jump must be either k - 1, k or k +1 units.
-Not that the frog can only jump in the forward direction.
+then its next jump must be either k - 1, k or k + 1 units.
+Note that the frog can only jump in the forward direction.
 
 Note:
 

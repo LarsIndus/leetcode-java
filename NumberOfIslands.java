@@ -8,7 +8,8 @@ by connecting adjacent lands horizontally or vertically.
 You may assume all four edges of the grid are all surrounded by water.
 
 Complexity for this solution:
-O(nm) time (linear in size of the matrix)
+O(nm) time and space (linear in size of the matrix).
+Space because of recursion (--> call stack!) in the worst case.
 
 */
 
@@ -17,11 +18,11 @@ public class NumberOfIslands {
     private static void dfs(char[][] grid, int i, int j) {
 
         // check boundaries and whether there is land
-        if (i < 0 || j < 0 || i >= grid.length || j >= grid[i].length || grid[i][j] == '0') {
+        if (i < 0 || j < 0 || i >= grid.length || j >= grid[i].length || grid[i][j] != '1') {
             return;
         }
         
-        grid[i][j] = '0'; // anything but '1'
+        grid[i][j] = '#'; // anything but '1', can also be set to '0'
         dfs(grid, i + 1, j);
         dfs(grid, i - 1, j);
         dfs(grid, i, j + 1);
