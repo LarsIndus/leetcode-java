@@ -1,15 +1,16 @@
 /*
 
-Leetcode Problem 40: Combination Sum II (Medium)
+Leetcode Problem 39: Combination Sum (Medium)
 
-Given a collection of candidate numbers (candidates) and a target number (target),
-find all unique combinations in candidates where the candidate numbers sums to target.
-Each number in candidates may only be used once in the combination.
+Given an array of distinct integers candidates and a target integer target,
+return a list of all unique combinations of candidates where the chosen numbers sum to target.
+You may return the combinations in any order.
 
-Note:
+The same number may be chosen from candidates an unlimited number of times.
+Two combinations are unique if the frequency of at least one of the chosen numbers is different.
 
-    - All numbers (including target) will be positive integers.
-    - The solution set must not contain duplicate combinations.
+It is guaranteed that the number of unique combinations that sum up to target
+is less than 150 combinations for the given input.
 
 Complexity for this solution:
 O(2^n) time, O(n) space (not considering the space for the result but just recursion)
@@ -21,10 +22,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
-public class CombinationSumII {
+public class CombinationSum {
 
     // backtracking approach; most logic is inside the helper function
-    public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(candidates);
         findCombinations(candidates, 0, target, new ArrayList<Integer>(), result);
@@ -51,20 +52,17 @@ public class CombinationSumII {
         // Go through the next elements and call the helper recursively;
         // after that delete last element (backtracking).
         for (int i = index; i < candidates.length; i++) {
-            // first check for duplicates
-            if (i == index || candidates[i] != candidates[i - 1]) {
-                current.add(candidates[i]);
-                // i + 1 instead of i because we cannot reuse same elements:
-                findCombinations(candidates, i + 1, target - candidates[i], current, result);
-                current.remove(current.size() - 1);
-            }
+            current.add(candidates[i]);
+            // not i + 1 because we can reuse same elements:
+            findCombinations(candidates, i, target - candidates[i], current, result);
+            current.remove(current.size() - 1);
         }
 
     }
 
     public static void main(String[] args) {
-        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
+        int[] candidates = {2, 3, 5};
         int target = 8;
-        System.out.println(combinationSum2(candidates, target));
+        System.out.println(combinationSum(candidates, target));
     }
 }
