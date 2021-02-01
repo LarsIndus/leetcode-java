@@ -10,7 +10,7 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 Note that 1 does not map to any letters.
 
 Complexity for this solution:
-...
+Time and space complexity is O(4^n) (as there are at most 4 characters on a number button).
 
 */
 
@@ -59,7 +59,7 @@ public class PhoneNumberCombinations {
     }
 
     public static void main(String[] args) {
-        String digits = "";
+        String digits = "283";
         System.out.println(PhoneNumberCombinations.letterCombinations(digits));
     }
 }

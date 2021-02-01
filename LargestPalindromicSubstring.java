@@ -5,7 +5,7 @@ Leetcode Problem 5: Largest Palindromic Substring (Medium)
 Given a string s, return the longest palindromic substring in s.
 
 Complexity for this solution:
-...
+O(n^2) time and O(1) space (use three pointers, see below)
 
 */
 
@@ -44,7 +44,7 @@ public class LargestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        String testStr = "hallogabagokay";
+        String testStr = "babad";
         System.out.println(LargestPalindromicSubstring.longestPalindrome(testStr));
     }
 }

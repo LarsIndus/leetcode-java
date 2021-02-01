@@ -10,7 +10,8 @@ An input string is valid if:
     - Open brackets must be closed in the correct order.
 
 Complexity for this solution:
-...
+Time complexity of this solution is O(n), with n being the length of the string.
+Space complexity is O(n) in the worst case, O(1) otherwise.
 
 */
 

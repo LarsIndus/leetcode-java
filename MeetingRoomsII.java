@@ -1,6 +1,6 @@
 /*
 
-Leetcode Problem 252: Meeting Rooms II (Medium)
+Leetcode Problem 253: Meeting Rooms II (Medium)
 
 Given an array of meeting time intervals consisting of start and end times
 [[s1, e1], [s2, e2], ...] with s_i < e_i,

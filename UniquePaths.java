@@ -8,7 +8,7 @@ The robot is trying to reach the bottom-right corner of the grid.
 How many possible unique paths are there?
 
 Complexity for this solution:
-...
+O(nm) time and space (linear in grid size)
 
 */
 

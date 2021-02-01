@@ -1,6 +1,6 @@
 /*
 
-Leetcode Problem 389: Pascal's Triangle II (Easy)
+Leetcode Problem 119: Pascal's Triangle II (Easy)
 
 Given an integer k, return the kth row of the Pascal's triangle.
 Notice that the row index starts from 0.

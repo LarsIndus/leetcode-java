@@ -8,11 +8,12 @@ The maximum depth is the number of nodes along the longest path
 from the root node down to the farthest leaf node.
 
 Complexity for this solution:
-...
+Time and space complexity is O(n) with n being the nuber of nodes in the tree.
+Average space complexity is O(log n) for a balanced tree.
 
 */
 
-public class MaxDepthTree {
+public class MaxDepthOfBinaryTree {
     
     public static int getMaxDepth(TreeNode root) {
         if (root == null) return 0;
