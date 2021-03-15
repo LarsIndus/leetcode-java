@@ -7,7 +7,8 @@ Your function should return true if any value appears at least twice in the arra
 and it should return false if every element is distinct.
 
 Complexity for this solution:
-O(n) time and space complexity
+O(n) time and space complexity (first solution)
+O(n log n) time and O(1) space (second solution)
 
 */
 
