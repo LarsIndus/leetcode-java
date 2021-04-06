@@ -10,7 +10,7 @@ Complexity for this solution:
 
 */
 
-public class MergeTwoLists {
+public class MergeTwoSortedLists {
     
     public static ListNode merge(ListNode head1, ListNode head2) {
 
